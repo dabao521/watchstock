@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>watchthestock</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>   
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+        <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script> 
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    </head>
+    
+    <body ng-app="mainApp">
+        <ui-view></ui-view>
+        <script src="/client/app.js"></script>
+        <script src="/services/socket.service.js"></script>
+        <script src="/controllers/uirouter.controller.js"></script>
+        <!--<script src="/controllers/socket.controller.js"></script>-->
+        <script src="/services/stock.service.js"></script>
+        <script src="/controllers/main.ctrl.js"></script>
+        <link rel="stylesheet" href="/public/css/main.css">
+    </body>
+</html>    

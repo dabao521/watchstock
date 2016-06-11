@@ -1,0 +1,21 @@
+<div class="container">
+    <div id="stockChart"></div>
+        
+    <div ng-class="stockContainer" class="row">
+        <div ng-repeat="stock in stocks" class="col-sm-4 pad">
+            <h2>{{stock.dataset.dataset_code}} <button ng-click="removeStock($index)">&times</button></h2>
+            <span>{{stock.dataset.name}}</span>
+        </div>    
+        
+        <div class="col-sm-4 pad">
+            <h3>Syncs with all customers at real time:</h3>
+            <input type="text" placeholder="Stock Code" ng-model="userCode">
+            <span><button ng-click="addStock()">ADD</button></span>
+        </div>
+    </div>
+    
+    
+    <div ng-show="showErr">
+        <p>{{errInfo}}</p>
+    </div>
+</div>
